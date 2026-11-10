@@ -1,0 +1,8 @@
+# Tested with Python 3.11+ and these exact versions.
+streamlit==1.67.0
+pandas==3.0.5
+altair==6.3.0
+duckdb==2.0.0
+anthropic==2.7.0
+requests>=2.31
+databricks-sdk==0.164.0

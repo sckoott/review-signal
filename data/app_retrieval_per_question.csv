@@ -1,0 +1,41 @@
+split,method,question_id,answerable,evidence_ids,precision_at_k,recall_at_k,correct_abstention
+development,lexical,Q01,True,"R005, R006, R015",0.6666666666666666,0.4,True
+development,lexical,Q02,True,"R020, R014, R018",0.3333333333333333,0.2,True
+development,lexical,Q03,True,"R003, R007, R013",0.0,0.0,True
+development,lexical,Q04,True,"R035, R036, R045",0.6666666666666666,0.4,True
+development,lexical,Q05,True,"R050, R044, R048",0.3333333333333333,0.2,True
+development,lexical,Q06,True,"R033, R037, R043",0.0,0.0,True
+development,lexical,Q07,True,"R065, R066, R075",0.6666666666666666,0.4,True
+development,lexical,Q08,True,"R080, R074, R078",0.3333333333333333,0.2,True
+development,lexical,Q09,True,"R063, R067, R073",0.0,0.0,True
+development,lexical,Q10,True,"R095, R096, R105",0.6666666666666666,0.4,True
+development,lexical,Q17,False,"R004, R008, R014",0.0,nan,False
+development,lexical,Q18,False,"R004, R008, R014",0.0,nan,False
+development,review_rules,Q01,True,"R005, R006, R003",1.0,0.6,True
+development,review_rules,Q02,True,"R014, R013, R015",1.0,0.6,True
+development,review_rules,Q03,True,"R023, R027, R025",1.0,0.6,True
+development,review_rules,Q04,True,"R035, R036, R033",1.0,0.6,True
+development,review_rules,Q05,True,"R044, R043, R045",1.0,0.6,True
+development,review_rules,Q06,True,"R053, R057, R055",1.0,0.6,True
+development,review_rules,Q07,True,"R065, R066, R063",1.0,0.6,True
+development,review_rules,Q08,True,"R074, R073, R075",1.0,0.6,True
+development,review_rules,Q09,True,"R083, R087, R085",1.0,0.6,True
+development,review_rules,Q10,True,"R095, R096, R093",1.0,0.6,True
+development,review_rules,Q17,False,,0.0,nan,True
+development,review_rules,Q18,False,,0.0,nan,True
+test,lexical,Q11,True,"R110, R104, R108",0.3333333333333333,0.2,True
+test,lexical,Q12,True,"R093, R097, R103",0.0,0.0,True
+test,lexical,Q13,True,"R004, R008, R009",0.3333333333333333,0.2,True
+test,lexical,Q14,True,"R034, R038, R039",0.3333333333333333,0.2,True
+test,lexical,Q15,True,"R064, R068, R069",0.3333333333333333,0.2,True
+test,lexical,Q16,True,"R094, R098, R099",0.3333333333333333,0.2,True
+test,lexical,Q19,False,"R004, R008, R014",0.0,nan,False
+test,lexical,Q20,False,"R025, R024, R029",0.0,nan,False
+test,review_rules,Q11,True,"R104, R103, R105",1.0,0.6,True
+test,review_rules,Q12,True,"R113, R117, R115",1.0,0.6,True
+test,review_rules,Q13,True,"R004, R005, R006",1.0,0.6,True
+test,review_rules,Q14,True,"R034, R035, R036",1.0,0.6,True
+test,review_rules,Q15,True,"R064, R065, R066",1.0,0.6,True
+test,review_rules,Q16,True,"R094, R095, R096",1.0,0.6,True
+test,review_rules,Q19,False,,0.0,nan,True
+test,review_rules,Q20,False,,0.0,nan,True

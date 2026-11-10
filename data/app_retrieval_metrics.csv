@@ -1,0 +1,5 @@
+split,method,n,answerable_n,unsupported_n,mean_precision_at_k_answerable,mean_recall_at_k_answerable,abstention_accuracy,unsupported_answer_rate
+development,lexical,12.0,10.0,2.0,0.36666666666666664,0.22000000000000003,0.8333333333333334,1.0
+development,review_rules,12.0,10.0,2.0,1.0,0.6,1.0,0.0
+test,lexical,8.0,6.0,2.0,0.27777777777777773,0.16666666666666666,0.75,1.0
+test,review_rules,8.0,6.0,2.0,1.0,0.6,1.0,0.0

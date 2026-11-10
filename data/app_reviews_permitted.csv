@@ -1,0 +1,97 @@
+review_id,product_id,topic,review_text,review_date,source_allowed
+R003,shoe_a,comfort,I used shoe_a daily and found its comfort good.,2026-09-03,True
+R004,shoe_a,comfort,The comfort of shoe_a was disappointing on a long outing.,2026-09-04,True
+R005,shoe_a,comfort,"After a month, shoe_a still had reliable comfort.",2026-09-05,True
+R006,shoe_a,comfort,"Compared with my expectations, shoe_a had average comfort.",2026-09-06,True
+R007,shoe_a,comfort,My experience with shoe_a suggests its comfort needs improvement.,2026-09-07,True
+R008,shoe_a,comfort,I cannot assess the comfort of shoe_a; I never used it.,2026-09-08,True
+R009,shoe_a,comfort,This review does not describe comfort for shoe_a; I only discuss shipping.,2026-09-09,True
+R010,shoe_a,comfort,I have no evidence about the comfort of shoe_a after one unboxing.,2026-09-10,True
+R013,shoe_a,fit,I used shoe_a daily and found its fit good.,2026-09-03,True
+R014,shoe_a,fit,The fit of shoe_a was disappointing on a long outing.,2026-09-04,True
+R015,shoe_a,fit,"After a month, shoe_a still had reliable fit.",2026-09-05,True
+R016,shoe_a,fit,"Compared with my expectations, shoe_a had average fit.",2026-09-06,True
+R017,shoe_a,fit,My experience with shoe_a suggests its fit needs improvement.,2026-09-07,True
+R018,shoe_a,fit,I cannot assess the fit of shoe_a; I never used it.,2026-09-08,True
+R019,shoe_a,fit,This review does not describe fit for shoe_a; I only discuss shipping.,2026-09-09,True
+R020,shoe_a,fit,I have no evidence about the fit of shoe_a after one unboxing.,2026-09-10,True
+R023,shoe_a,durability,I used shoe_a daily and found its durability good.,2026-09-03,True
+R024,shoe_a,durability,The durability of shoe_a was disappointing on a long outing.,2026-09-04,True
+R025,shoe_a,durability,"After a month, shoe_a still had reliable durability.",2026-09-05,True
+R026,shoe_a,durability,"Compared with my expectations, shoe_a had average durability.",2026-09-06,True
+R027,shoe_a,durability,My experience with shoe_a suggests its durability needs improvement.,2026-09-07,True
+R028,shoe_a,durability,I cannot assess the durability of shoe_a; I never used it.,2026-09-08,True
+R029,shoe_a,durability,This review does not describe durability for shoe_a; I only discuss shipping.,2026-09-09,True
+R030,shoe_a,durability,I have no evidence about the durability of shoe_a after one unboxing.,2026-09-10,True
+R033,shoe_b,comfort,I used shoe_b daily and found its comfort good.,2026-09-03,True
+R034,shoe_b,comfort,The comfort of shoe_b was disappointing on a long outing.,2026-09-04,True
+R035,shoe_b,comfort,"After a month, shoe_b still had reliable comfort.",2026-09-05,True
+R036,shoe_b,comfort,"Compared with my expectations, shoe_b had average comfort.",2026-09-06,True
+R037,shoe_b,comfort,My experience with shoe_b suggests its comfort needs improvement.,2026-09-07,True
+R038,shoe_b,comfort,I cannot assess the comfort of shoe_b; I never used it.,2026-09-08,True
+R039,shoe_b,comfort,This review does not describe comfort for shoe_b; I only discuss shipping.,2026-09-09,True
+R040,shoe_b,comfort,I have no evidence about the comfort of shoe_b after one unboxing.,2026-09-10,True
+R043,shoe_b,fit,I used shoe_b daily and found its fit good.,2026-09-03,True
+R044,shoe_b,fit,The fit of shoe_b was disappointing on a long outing.,2026-09-04,True
+R045,shoe_b,fit,"After a month, shoe_b still had reliable fit.",2026-09-05,True
+R046,shoe_b,fit,"Compared with my expectations, shoe_b had average fit.",2026-09-06,True
+R047,shoe_b,fit,My experience with shoe_b suggests its fit needs improvement.,2026-09-07,True
+R048,shoe_b,fit,I cannot assess the fit of shoe_b; I never used it.,2026-09-08,True
+R049,shoe_b,fit,This review does not describe fit for shoe_b; I only discuss shipping.,2026-09-09,True
+R050,shoe_b,fit,I have no evidence about the fit of shoe_b after one unboxing.,2026-09-10,True
+R053,shoe_b,durability,I used shoe_b daily and found its durability good.,2026-09-03,True
+R054,shoe_b,durability,The durability of shoe_b was disappointing on a long outing.,2026-09-04,True
+R055,shoe_b,durability,"After a month, shoe_b still had reliable durability.",2026-09-05,True
+R056,shoe_b,durability,"Compared with my expectations, shoe_b had average durability.",2026-09-06,True
+R057,shoe_b,durability,My experience with shoe_b suggests its durability needs improvement.,2026-09-07,True
+R058,shoe_b,durability,I cannot assess the durability of shoe_b; I never used it.,2026-09-08,True
+R059,shoe_b,durability,This review does not describe durability for shoe_b; I only discuss shipping.,2026-09-09,True
+R060,shoe_b,durability,I have no evidence about the durability of shoe_b after one unboxing.,2026-09-10,True
+R063,jacket_a,comfort,I used jacket_a daily and found its comfort good.,2026-09-03,True
+R064,jacket_a,comfort,The comfort of jacket_a was disappointing on a long outing.,2026-09-04,True
+R065,jacket_a,comfort,"After a month, jacket_a still had reliable comfort.",2026-09-05,True
+R066,jacket_a,comfort,"Compared with my expectations, jacket_a had average comfort.",2026-09-06,True
+R067,jacket_a,comfort,My experience with jacket_a suggests its comfort needs improvement.,2026-09-07,True
+R068,jacket_a,comfort,I cannot assess the comfort of jacket_a; I never used it.,2026-09-08,True
+R069,jacket_a,comfort,This review does not describe comfort for jacket_a; I only discuss shipping.,2026-09-09,True
+R070,jacket_a,comfort,I have no evidence about the comfort of jacket_a after one unboxing.,2026-09-10,True
+R073,jacket_a,fit,I used jacket_a daily and found its fit good.,2026-09-03,True
+R074,jacket_a,fit,The fit of jacket_a was disappointing on a long outing.,2026-09-04,True
+R075,jacket_a,fit,"After a month, jacket_a still had reliable fit.",2026-09-05,True
+R076,jacket_a,fit,"Compared with my expectations, jacket_a had average fit.",2026-09-06,True
+R077,jacket_a,fit,My experience with jacket_a suggests its fit needs improvement.,2026-09-07,True
+R078,jacket_a,fit,I cannot assess the fit of jacket_a; I never used it.,2026-09-08,True
+R079,jacket_a,fit,This review does not describe fit for jacket_a; I only discuss shipping.,2026-09-09,True
+R080,jacket_a,fit,I have no evidence about the fit of jacket_a after one unboxing.,2026-09-10,True
+R083,jacket_a,durability,I used jacket_a daily and found its durability good.,2026-09-03,True
+R084,jacket_a,durability,The durability of jacket_a was disappointing on a long outing.,2026-09-04,True
+R085,jacket_a,durability,"After a month, jacket_a still had reliable durability.",2026-09-05,True
+R086,jacket_a,durability,"Compared with my expectations, jacket_a had average durability.",2026-09-06,True
+R087,jacket_a,durability,My experience with jacket_a suggests its durability needs improvement.,2026-09-07,True
+R088,jacket_a,durability,I cannot assess the durability of jacket_a; I never used it.,2026-09-08,True
+R089,jacket_a,durability,This review does not describe durability for jacket_a; I only discuss shipping.,2026-09-09,True
+R090,jacket_a,durability,I have no evidence about the durability of jacket_a after one unboxing.,2026-09-10,True
+R093,jacket_b,comfort,I used jacket_b daily and found its comfort good.,2026-09-03,True
+R094,jacket_b,comfort,The comfort of jacket_b was disappointing on a long outing.,2026-09-04,True
+R095,jacket_b,comfort,"After a month, jacket_b still had reliable comfort.",2026-09-05,True
+R096,jacket_b,comfort,"Compared with my expectations, jacket_b had average comfort.",2026-09-06,True
+R097,jacket_b,comfort,My experience with jacket_b suggests its comfort needs improvement.,2026-09-07,True
+R098,jacket_b,comfort,I cannot assess the comfort of jacket_b; I never used it.,2026-09-08,True
+R099,jacket_b,comfort,This review does not describe comfort for jacket_b; I only discuss shipping.,2026-09-09,True
+R100,jacket_b,comfort,I have no evidence about the comfort of jacket_b after one unboxing.,2026-09-10,True
+R103,jacket_b,fit,I used jacket_b daily and found its fit good.,2026-09-03,True
+R104,jacket_b,fit,The fit of jacket_b was disappointing on a long outing.,2026-09-04,True
+R105,jacket_b,fit,"After a month, jacket_b still had reliable fit.",2026-09-05,True
+R106,jacket_b,fit,"Compared with my expectations, jacket_b had average fit.",2026-09-06,True
+R107,jacket_b,fit,My experience with jacket_b suggests its fit needs improvement.,2026-09-07,True
+R108,jacket_b,fit,I cannot assess the fit of jacket_b; I never used it.,2026-09-08,True
+R109,jacket_b,fit,This review does not describe fit for jacket_b; I only discuss shipping.,2026-09-09,True
+R110,jacket_b,fit,I have no evidence about the fit of jacket_b after one unboxing.,2026-09-10,True
+R113,jacket_b,durability,I used jacket_b daily and found its durability good.,2026-09-03,True
+R114,jacket_b,durability,The durability of jacket_b was disappointing on a long outing.,2026-09-04,True
+R115,jacket_b,durability,"After a month, jacket_b still had reliable durability.",2026-09-05,True
+R116,jacket_b,durability,"Compared with my expectations, jacket_b had average durability.",2026-09-06,True
+R117,jacket_b,durability,My experience with jacket_b suggests its durability needs improvement.,2026-09-07,True
+R118,jacket_b,durability,I cannot assess the durability of jacket_b; I never used it.,2026-09-08,True
+R119,jacket_b,durability,This review does not describe durability for jacket_b; I only discuss shipping.,2026-09-09,True
+R120,jacket_b,durability,I have no evidence about the durability of jacket_b after one unboxing.,2026-09-10,True

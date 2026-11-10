@@ -1,0 +1,18 @@
+# Databricks Apps configuration.
+command: ["streamlit", "run", "app.py"]
+
+env:
+  # LLM key (optional — the app works without it in extractive mode).
+  # 1) Store the key in a Databricks secret.  2) In the app's "Resources", add that secret
+  #    with the resource key "anthropic-api-key".  3) Uncomment the two lines below.
+  # - name: ANTHROPIC_API_KEY
+  #   valueFrom: anthropic-api-key
+
+  # Genie (optional). Add the Genie space as an app resource with key "genie-space", then uncomment.
+  # - name: GENIE_SPACE_ID
+  #   valueFrom: genie-space
+
+  - name: LLM_PROVIDER
+    value: "auto"
+  - name: EXEC_EMAILS
+    value: ""

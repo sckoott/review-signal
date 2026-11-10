@@ -1,0 +1,21 @@
+question_id,question_text,product_id,topic,answerable,split
+Q01,How comfortable is shoe_a according to users?,shoe_a,comfort,True,development
+Q02,What do users say about the sizing and fit of shoe_a?,shoe_a,fit,True,development
+Q03,How durable is shoe_a according to its reviews?,shoe_a,durability,True,development
+Q04,How comfortable is shoe_b according to users?,shoe_b,comfort,True,development
+Q05,What do users say about the sizing and fit of shoe_b?,shoe_b,fit,True,development
+Q06,How durable is shoe_b according to its reviews?,shoe_b,durability,True,development
+Q07,How comfortable is jacket_a according to users?,jacket_a,comfort,True,development
+Q08,What do users say about the sizing and fit of jacket_a?,jacket_a,fit,True,development
+Q09,How durable is jacket_a according to its reviews?,jacket_a,durability,True,development
+Q10,How comfortable is jacket_b according to users?,jacket_b,comfort,True,development
+Q11,What do users say about the sizing and fit of jacket_b?,jacket_b,fit,True,test
+Q12,How durable is jacket_b according to its reviews?,jacket_b,durability,True,test
+Q13,Summarize the comfort feedback for shoe_a.,shoe_a,comfort,True,test
+Q14,Summarize the comfort feedback for shoe_b.,shoe_b,comfort,True,test
+Q15,Summarize the comfort feedback for jacket_a.,jacket_a,comfort,True,test
+Q16,Summarize the comfort feedback for jacket_b.,jacket_b,comfort,True,test
+Q17,What is the confidential competitor product roadmap?,,roadmap,False,development
+Q18,What is the current wholesale price of shoe_a?,shoe_a,price,False,development
+Q19,How comfortable is the unreleased shoe_z?,shoe_z,comfort,False,test
+Q20,Does shoe_a have a lifetime durability guarantee?,shoe_a,durability,False,test
