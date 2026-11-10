@@ -6,7 +6,7 @@ from ui import state
 from ui.components import auto_chart, chip, esc, money, page_header
 
 page_header("Data Q&A", "Counts, rankings and shares over the permitted review tables — answered by Databricks "
-            "Genie when it is configured, with the SQL always shown.")
+            "Genie when it is configured, with the SQL always shown.", kicker="Numbers · Genie")
 
 s = state.settings()
 if genie_configured(s):

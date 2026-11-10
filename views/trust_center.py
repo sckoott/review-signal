@@ -9,7 +9,7 @@ from ui import state
 from ui.components import esc, id_chips, page_header
 
 page_header("Trust Center", "How we know the answers can be trusted: the same frozen questions scored for the old "
-            "and new approach, governance tests run live, and the cost and speed of every answer.")
+            "and new approach, governance tests run live, and the cost and speed of every answer.", kicker="Proof & governance")
 
 tabs = st.tabs(["Scorecard", "Arena", "Governance tests", "Live revocation demo", "Telemetry"])
 tables = state.tables()

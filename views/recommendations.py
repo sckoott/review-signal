@@ -7,7 +7,7 @@ from ui import state
 from ui.components import esc, id_chips, page_header, sentiment_bar
 
 page_header("Recommendations", "A separate, human-approved step: rank segments, draft an action from the evidence, "
-            "then accept, edit or reject it. Only accepted actions reach the Exec Brief.")
+            "then accept, edit or reject it. Only accepted actions reach the Exec Brief.", kicker="From insight to action")
 
 segs = state.segments()
 products = state.products()

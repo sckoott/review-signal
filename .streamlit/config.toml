@@ -1,13 +1,101 @@
-[theme]
-base = "light"
-primaryColor = "#2B59C3"
-backgroundColor = "#FAFAF7"
-secondaryBackgroundColor = "#F0EFEA"
-textColor = "#141414"
-font = "sans serif"
+# "Performance tech" theme: black & white, condensed athletic type, electric accent.
+# Fonts are bundled in ./static/fonts (SIL Open Font License) so nothing loads from the internet.
+
+[server]
+enableStaticServing = true
 
 [client]
 toolbarMode = "minimal"
 
 [browser]
 gatherUsageStats = false
+
+[theme]
+base = "light"
+primaryColor = "#0A0A0A"
+backgroundColor = "#FFFFFF"
+secondaryBackgroundColor = "#F2F2F0"
+textColor = "#0A0A0A"
+linkColor = "#1F4BFF"
+borderColor = "#DEDEDA"
+showWidgetBorder = true
+baseRadius = "0.15rem"
+buttonRadius = "0.15rem"
+font = "Inter, sans-serif"
+headingFont = "Barlow Condensed, Inter, sans-serif"
+headingFontWeights = [800, 800, 700, 700, 700, 700]
+codeFont = "JetBrains Mono, monospace"
+blueColor = "#1F4BFF"
+greenColor = "#00A86B"
+orangeColor = "#FF4D00"
+dataframeHeaderBackgroundColor = "#0A0A0A"
+dataframeHeaderTextColor = "#FFFFFF"
+chartCategoricalColors = ["#0A0A0A", "#1F4BFF", "#FF4D00", "#8A8A85", "#00A86B", "#C9F31D"]
+
+[[theme.fontFaces]]
+family = "Inter"
+url = "app/static/fonts/inter-latin-400-normal.woff2"
+weight = "400"
+style = "normal"
+
+[[theme.fontFaces]]
+family = "Inter"
+url = "app/static/fonts/inter-latin-500-normal.woff2"
+weight = "500"
+style = "normal"
+
+[[theme.fontFaces]]
+family = "Inter"
+url = "app/static/fonts/inter-latin-600-normal.woff2"
+weight = "600"
+style = "normal"
+
+[[theme.fontFaces]]
+family = "Inter"
+url = "app/static/fonts/inter-latin-700-normal.woff2"
+weight = "700"
+style = "normal"
+
+[[theme.fontFaces]]
+family = "Barlow Condensed"
+url = "app/static/fonts/barlow-condensed-latin-600-normal.woff2"
+weight = "600"
+style = "normal"
+
+[[theme.fontFaces]]
+family = "Barlow Condensed"
+url = "app/static/fonts/barlow-condensed-latin-800-normal.woff2"
+weight = "800"
+style = "normal"
+
+[[theme.fontFaces]]
+family = "Barlow Condensed"
+url = "app/static/fonts/barlow-condensed-latin-700-italic.woff2"
+weight = "700"
+style = "italic"
+
+[[theme.fontFaces]]
+family = "Barlow Condensed"
+url = "app/static/fonts/barlow-condensed-latin-800-italic.woff2"
+weight = "800"
+style = "italic"
+
+[[theme.fontFaces]]
+family = "JetBrains Mono"
+url = "app/static/fonts/jetbrains-mono-latin-400-normal.woff2"
+weight = "400"
+style = "normal"
+
+[[theme.fontFaces]]
+family = "JetBrains Mono"
+url = "app/static/fonts/jetbrains-mono-latin-600-normal.woff2"
+weight = "600"
+style = "normal"
+
+[theme.sidebar]
+backgroundColor = "#0A0A0A"
+secondaryBackgroundColor = "#1A1A1A"
+textColor = "#F5F5F2"
+primaryColor = "#C9F31D"
+borderColor = "#2A2A2A"
+linkColor = "#C9F31D"

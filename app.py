@@ -28,8 +28,8 @@ PAGE_META = {
 
 
 with st.sidebar:
-    st.markdown("### Review Signal")
-    st.caption("Evidence-first review insights")
+    st.markdown('<div class="rs-wordmark">Review<span>/</span><br>Signal</div>'
+                '<div class="rs-tagline">Evidence-first review intelligence</div>', unsafe_allow_html=True)
     st.radio("View as", state.ROLES, key="role",
              help="On Databricks Apps the default comes from the signed-in user (EXEC_EMAILS). "
                   "The switch is kept for the demo.")
@@ -51,7 +51,7 @@ if nav is not pages[home]:
 with st.sidebar:
     st.divider()
     s = state.settings()
-    st.markdown("**Engine status**")
+    st.markdown('<div class="rs-tagline" style="color:#C9F31D">Engine status</div>', unsafe_allow_html=True)
     st.caption(f"LLM: {llm.describe(s)}")
     if llm.is_available(s):
         st.toggle("Use LLM synthesis", key="use_llm",

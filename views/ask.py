@@ -6,7 +6,7 @@ from ui.components import (auto_chart, chip, esc, funnel_table, id_chips, money,
                            safe_excluded, sentiment_bar)
 
 page_header("Ask", "Ask what customers say about comfort, fit or durability. Every answer shows the reviews "
-            "behind it — or says plainly when reviews can't answer.")
+            "behind it — or says plainly when reviews can't answer.", kicker="For product teams")
 
 SUGGESTIONS = [
     "How durable is shoe_a according to its reviews?",

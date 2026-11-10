@@ -11,7 +11,7 @@ segs = state.segments()
 corpus = state.corpus()
 last_review = corpus.loc[corpus["is_evidence"], "review_date"].max() if corpus["is_evidence"].any() else "n/a"
 page_header("Exec Brief", f"One screen for decisions. Data: permitted reviews up to {last_review} · "
-            f"generated {dt.date.today():%d %b %Y} · synthetic teaching data.")
+            f"generated {dt.date.today():%d %b %Y} · synthetic teaching data.", kicker="Executive view")
 
 # ---- Band 1: decisions needed ---------------------------------------------------------------
 st.markdown("### Decisions needed")
@@ -53,7 +53,7 @@ c = st.columns(4)
 c[0].metric("Relevance (test set)", f"{test.loc['segment', 'recall']:.0%} recall",
             delta=f"{(test.loc['segment', 'recall'] - test.loc['lexical', 'recall']) * 100:+.0f} pts vs keyword",
             help="Share of labelled relevant reviews put in context, held-out test questions.")
-c[1].metric("Unsupported questions answered", f"{test.loc['segment', 'unsupported_answer_rate']:.0%}",
+c[1].metric("Out-of-scope answered", f"{test.loc['segment', 'unsupported_answer_rate']:.0%}",
             delta=f"{(test.loc['segment', 'unsupported_answer_rate'] - test.loc['lexical', 'unsupported_answer_rate']) * 100:+.0f} pts vs keyword",
             delta_color="inverse")
 if len(asks):

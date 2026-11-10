@@ -9,30 +9,74 @@ import streamlit as st
 
 from engine.data import STATUS_LABEL, overall_label
 
-SENTIMENT_COLORS = {"negative": "#D55E00", "neutral": "#9A9A9A", "positive": "#009E73", "unclassified": "#C9C9C9"}
-ACCENT = "#2B59C3"
+SENTIMENT_COLORS = {"negative": "#FF4D00", "neutral": "#B4B4AE", "positive": "#1F4BFF", "unclassified": "#DADAD5"}
+ACCENT = "#1F4BFF"
+INK = "#0A0A0A"
+VOLT = "#C9F31D"
 
 CSS = """
 <style>
-.block-container {padding-top: 2.2rem; max-width: 1180px;}
-h1, h2, h3 {letter-spacing: -0.01em;}
-.rs-sub {color:#5f5f5f; font-size:0.98rem; margin-top:-0.6rem; margin-bottom:1.2rem;}
-.rs-chip {display:inline-block; padding:2px 9px; margin:0 6px 4px 0; border-radius:999px; font-size:0.78rem;
-          border:1px solid #d9d7d0; background:#fff; color:#333; white-space:nowrap;}
-.rs-chip.route-evidence {border-color:#2B59C3; color:#2B59C3;}
-.rs-chip.route-sql {border-color:#6A3FB5; color:#6A3FB5;}
-.rs-chip.route-abstain {border-color:#B5651D; color:#B5651D;}
-.rs-id {font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size:0.78rem; background:#EFEEE9;
-        border-radius:4px; padding:1px 5px; margin-left:4px; color:#333;}
-.rs-verdict {font-size:1.15rem; font-weight:600; line-height:1.45; margin:0.3rem 0 0.6rem 0;}
-.rs-bar {display:flex; height:12px; border-radius:6px; overflow:hidden; margin:4px 0 4px 0; background:#eee;}
-.rs-legend {font-size:0.8rem; color:#555; margin-bottom:0.6rem;}
-.rs-dot {display:inline-block; width:9px; height:9px; border-radius:50%; margin-right:6px;}
-.rs-quote {border-left:3px solid #ddd; padding:4px 0 4px 12px; margin:6px 0; font-size:0.95rem;}
-.rs-meta {color:#777; font-size:0.78rem;}
-.rs-abstain {border:1px solid #E7C9A9; background:#FFF8F1; border-radius:10px; padding:14px 16px;}
-.rs-note {color:#666; font-size:0.85rem;}
-.rs-kicker {text-transform:uppercase; letter-spacing:0.08em; font-size:0.72rem; color:#777; margin-bottom:2px;}
+.block-container {padding-top: 1.6rem; max-width: 1200px;}
+
+/* ---------- hero band (keyed container) ---------- */
+.st-key-hero {background:#0A0A0A; color:#fff; padding:22px 190px 18px 28px; position:relative; overflow:hidden;
+              margin-bottom:0.6rem;}
+.st-key-hero::after {content:""; position:absolute; top:0; right:-40px; width:150px; height:100%;
+                     background:#C9F31D; transform:skewX(-18deg);}
+.st-key-hero h1 {color:#fff !important; font-style:italic; text-transform:uppercase; letter-spacing:0.01em;
+                 font-size:3.1rem !important; line-height:1 !important; padding:0 !important; margin:0 !important;}
+.st-key-hero h1 a {display:none !important;}
+.rs-hero-kicker {font-family:"JetBrains Mono", monospace; font-size:0.72rem; letter-spacing:0.18em; color:#C9F31D;
+                 text-transform:uppercase; margin-bottom:6px;}
+.rs-hero-sub {color:#CFCFCA; font-size:0.98rem; max-width:860px; margin-top:6px;}
+.rs-hero-stats {margin-top:12px; position:relative; z-index:1;}
+.rs-stat {display:inline-block; font-family:"JetBrains Mono", monospace; font-size:0.72rem; color:#fff;
+          border:1px solid #3A3A3A; padding:3px 9px; margin:0 6px 4px 0; letter-spacing:0.06em; text-transform:uppercase;}
+.rs-stat b {color:#C9F31D; font-weight:600;}
+
+/* ---------- headings ---------- */
+h2, h3 {text-transform:uppercase; font-style:italic; letter-spacing:0.01em;}
+h4 {text-transform:uppercase; letter-spacing:0.04em;}
+
+/* ---------- metrics ---------- */
+[data-testid="stMetric"] {border-left:4px solid #0A0A0A; padding-left:12px;}
+[data-testid="stMetricLabel"] p {text-transform:uppercase; letter-spacing:0.08em; font-size:0.72rem !important;
+                                 font-weight:600; color:#55554F;}
+[data-testid="stMetricValue"] {font-family:"Barlow Condensed", Inter, sans-serif; font-weight:800; font-style:italic;}
+
+/* ---------- buttons & tabs ---------- */
+[data-testid="stBaseButton-primary"] {text-transform:uppercase; letter-spacing:0.06em; font-weight:700;}
+[data-testid="stBaseButton-primary"]:hover {background:#1F4BFF !important; border-color:#1F4BFF !important;}
+[data-testid="stBaseButton-secondary"]:hover {border-color:#0A0A0A !important; color:#0A0A0A !important;}
+[data-testid="stTab"] p {text-transform:uppercase; letter-spacing:0.06em; font-weight:600;}
+
+/* ---------- sidebar ---------- */
+.rs-wordmark {font-family:"Barlow Condensed", Inter, sans-serif; font-weight:800; font-style:italic; font-size:2rem;
+              line-height:0.95; text-transform:uppercase; color:#fff; letter-spacing:0.01em;}
+.rs-wordmark span {color:#C9F31D;}
+.rs-tagline {font-family:"JetBrains Mono", monospace; font-size:0.66rem; letter-spacing:0.16em; color:#9C9C96;
+             text-transform:uppercase; margin-top:4px; margin-bottom:14px;}
+
+/* ---------- content components ---------- */
+.rs-sub {color:#55554F; font-size:0.98rem; margin-top:-0.6rem; margin-bottom:1.2rem;}
+.rs-chip {display:inline-block; padding:2px 9px; margin:0 6px 4px 0; font-size:0.7rem; border:1px solid #0A0A0A;
+          background:#fff; color:#0A0A0A; white-space:nowrap; text-transform:uppercase; letter-spacing:0.08em;
+          font-family:"JetBrains Mono", monospace;}
+.rs-chip.route-evidence {background:#1F4BFF; border-color:#1F4BFF; color:#fff;}
+.rs-chip.route-sql {background:#0A0A0A; color:#C9F31D;}
+.rs-chip.route-abstain {background:#FF4D00; border-color:#FF4D00; color:#fff;}
+.rs-id {font-family:"JetBrains Mono", monospace; font-size:0.72rem; background:#0A0A0A; color:#fff;
+        padding:1px 6px; margin-left:4px; letter-spacing:0.04em;}
+.rs-verdict {font-size:1.2rem; font-weight:700; line-height:1.4; margin:0.3rem 0 0.6rem 0;}
+.rs-bar {display:flex; height:10px; overflow:hidden; margin:4px 0 4px 0; background:#eee;}
+.rs-legend {font-size:0.78rem; color:#55554F; margin-bottom:0.6rem; text-transform:uppercase; letter-spacing:0.05em;}
+.rs-dot {display:inline-block; width:9px; height:9px; margin-right:6px;}
+.rs-quote {border-left:4px solid #ddd; padding:5px 0 5px 12px; margin:7px 0; font-size:0.95rem; background:#FAFAF8;}
+.rs-meta {color:#77776F; font-size:0.74rem; text-transform:uppercase; letter-spacing:0.04em;}
+.rs-abstain {border-left:4px solid #FF4D00; background:#FFF3EC; padding:14px 16px;}
+.rs-note {color:#55554F; font-size:0.86rem;}
+.rs-kicker {font-family:"JetBrains Mono", monospace; text-transform:uppercase; letter-spacing:0.16em; font-size:0.68rem;
+            color:#1F4BFF; margin-bottom:2px;}
 </style>
 """
 
@@ -57,9 +101,23 @@ def id_chips(ids) -> str:
     return "".join(f'<span class="rs-id">{esc(i)}</span>' for i in ids)
 
 
-def page_header(title: str, subtitle: str) -> None:
-    st.title(title)
-    st.markdown(f'<div class="rs-sub">{esc(subtitle)}</div>', unsafe_allow_html=True)
+def page_header(title: str, subtitle: str, kicker: str = "Performance insights") -> None:
+    """Black hero band with condensed italic title and live data stats."""
+    from ui import state  # local import: state does not depend on components
+
+    corpus = state.corpus()
+    stats = [("Permitted reviews", int(corpus["permitted"].sum())),
+             ("Evidence", int(corpus["is_evidence"].sum())),
+             ("Segments", int(corpus.groupby(["product_id", "topic"]).ngroups)),
+             ("Engine", "LLM" if state.settings().llm_provider != "none" and st.session_state.get("use_llm", True)
+              else "Extractive")]
+    with st.container(key="hero"):
+        st.markdown(f'<div class="rs-hero-kicker">Review Signal &nbsp;/&nbsp; {esc(kicker)}</div>',
+                    unsafe_allow_html=True)
+        st.title(title, anchor=False)
+        st.markdown(f'<div class="rs-hero-sub">{esc(subtitle)}</div><div class="rs-hero-stats">'
+                    + "".join(f'<span class="rs-stat">{esc(k)} <b>{esc(v)}</b></span>' for k, v in stats)
+                    + "</div>", unsafe_allow_html=True)
 
 
 def sentiment_bar(pos: int, neu: int, neg: int) -> None:
@@ -102,15 +160,15 @@ def heatmap(segments: pd.DataFrame, selectable: bool = False, key: str = "heatma
                alt.Tooltip("negative_pct:Q", title="Negative %"), alt.Tooltip("no_evidence:Q", title="No-evidence"),
                alt.Tooltip("restricted:Q", title="Restricted"), alt.Tooltip("outdated:Q", title="Outdated")]
     color = alt.Color("negative_pct:Q", title="Negative %",
-                      scale=alt.Scale(domain=[0, 100], range=["#F4F1EA", "#D55E00"]))
+                      scale=alt.Scale(domain=[0, 100], range=["#F2F2F0", "#FF4D00"], interpolate="rgb"))
     if selectable:
         sel = alt.selection_point(name="cell", fields=["product_id", "topic"], on="click", clear=False)
-        rect = base.mark_rect(cornerRadius=6, stroke="#ffffff", strokeWidth=3).encode(
+        rect = base.mark_rect(cornerRadius=0, stroke="#ffffff", strokeWidth=4).encode(
             color=color, tooltip=tooltip,
             opacity=alt.condition(sel, alt.value(1.0), alt.value(0.55))).add_params(sel)
     else:
-        rect = base.mark_rect(cornerRadius=6, stroke="#ffffff", strokeWidth=3).encode(color=color, tooltip=tooltip)
-    text = base.mark_text(fontSize=12, fontWeight="bold").encode(
+        rect = base.mark_rect(cornerRadius=0, stroke="#ffffff", strokeWidth=4).encode(color=color, tooltip=tooltip)
+    text = base.mark_text(fontSize=13, fontWeight="bold", font="JetBrains Mono").encode(
         text="label:N",
         color=alt.condition("datum.negative_pct > 60", alt.value("#ffffff"), alt.value("#222222")))
     chart = (rect + text).properties(height=height)
@@ -131,7 +189,7 @@ def auto_chart(df: pd.DataFrame) -> None:
     if "product_id" in df.columns and "topic" in df.columns:
         chart = alt.Chart(df).mark_bar().encode(
             x=alt.X("product_id:N", title=None, axis=alt.Axis(labelAngle=0)), xOffset="topic:N",
-            y=alt.Y(f"{y}:Q"), color=alt.Color("topic:N", scale=alt.Scale(scheme="tableau10")),
+            y=alt.Y(f"{y}:Q"), color=alt.Color("topic:N", scale=alt.Scale(range=[INK, ACCENT, "#FF4D00"])),
             tooltip=list(df.columns))
     elif "sentiment" in df.columns and "product_id" in df.columns:
         chart = alt.Chart(df).mark_bar().encode(
@@ -141,7 +199,7 @@ def auto_chart(df: pd.DataFrame) -> None:
                 range=[c for s, c in SENTIMENT_COLORS.items() if s in set(df["sentiment"])])),
             tooltip=list(df.columns))
     else:
-        chart = alt.Chart(df).mark_bar(color=ACCENT).encode(
+        chart = alt.Chart(df).mark_bar(color=INK).encode(
             x=alt.X(f"{cat[0]}:N", title=None, axis=alt.Axis(labelAngle=0)), y=alt.Y(f"{y}:Q"),
             tooltip=list(df.columns))
     st.altair_chart(chart.properties(height=240))

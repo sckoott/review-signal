@@ -103,6 +103,10 @@ python -m pytest -q          # 69 tests: engine (metrics vs notebook, router, go
 - Telemetry, recommendation log and pins live in the browser session only; persist them to Delta tables for real adoption metrics.
 - The Genie integration is written against `databricks-sdk` 0.164 and tested with mocks; it needs a real Genie space to run end to end.
 
+## Theme
+
+"Performance tech" look: black and white, condensed italic headings, signal-orange for negative and electric-blue for positive (colour-blind safe), lime accent only on black. Fonts (Barlow Condensed, Inter, JetBrains Mono) are bundled in `static/fonts` under the SIL Open Font License, so nothing loads from the internet. Change colours in `.streamlit/config.toml` and `ui/components.py`. No third-party logos or brand marks are used.
+
 ## Files
 
 ```

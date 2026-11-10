@@ -5,7 +5,7 @@ from ui import state
 from ui.components import heatmap, page_header, segment_panel
 
 page_header("Issue Map", "Every product × issue at a glance. Colour = share of negative evidence reviews; "
-            "click a cell to see the reviews behind it.")
+            "click a cell to see the reviews behind it.", kicker="Product × issue")
 
 segs = state.segments()
 corpus = state.corpus()
@@ -16,8 +16,8 @@ k[0].metric("Segments", len(segs))
 k[1].metric("Evidence reviews", int(segs["evidence"].sum()))
 k[2].metric("Excluded (no evidence)", int(segs["no_evidence"].sum()),
             help="Permitted and current, but the text carries no product signal.")
-k[3].metric("Excluded (restricted / outdated / revoked)",
-            int(segs[["restricted", "outdated", "revoked", "deleted"]].sum().sum()))
+k[3].metric("Not permitted", int(segs[["restricted", "outdated", "revoked", "deleted"]].sum().sum()),
+            help="Restricted, outdated, revoked or deleted at source.")
 
 # Navigation requests from other pages, then deep links (?product=..&issue=..)
 nav_p, nav_t = st.session_state.pop("nav_product", None), st.session_state.pop("nav_topic", None)
